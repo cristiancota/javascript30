@@ -1,55 +1,56 @@
-html, body{
-    width: 100;
-    height: 100%;
+html,
+body {
+  width: 100;
+  height: 100%;
 }
 
 body {
-    background-image: url('https://images.unsplash.com/photo-1578317833701-9200d78d7d66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+  background-image: url("https://images.unsplash.com/photo-1578317833701-9200d78d7d66?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1534&q=80");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.container{
-    height: 100%;
+.container {
+  height: 100%;
 }
 
-.button-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.button{
-    width: 130px;
-    height: 130px;
-    border: 5px solid cadetblue;
-    border-radius: 2px;
-    margin: 5px;
-    text-align: center;
-    color: aliceblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ;
-    background-color: rgba(0,0,0,0.4);
+.button {
+  width: 130px;
+  height: 130px;
+  border: 5px solid cadetblue;
+  border-radius: 2px;
+  margin: 5px;
+  text-align: center;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.letter-trigger{
-    font-family: 'Modak', cursive;
-    font-size: 50px;
+.letter-trigger {
+  font-family: "Modak", cursive;
+  font-size: 50px;
 }
-.button p{
-    margin: 0;
+.button p {
+  margin: 0;
 }
 
-.button .description{
-    font-family: sans-serif;
+.button .description {
+  font-family: sans-serif;
 }
 
 .button.playing {
-    transform: scale(1.5);
-    background: cadetblue;
-    scale: 1.5;
+  transform: scale(1.5);
+  background: cadetblue;
+  scale: 1.5;
 }
