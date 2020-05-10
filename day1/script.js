@@ -17,3 +17,10 @@ window.addEventListener("keydown", playSound);
 document.querySelectorAll(".button").forEach((button) => {
   button.addEventListener("transitionend", removePlayingClass);
 });
+
+const rangeInput = document.querySelector("#volume-input");
+rangeInput.addEventListener("change", function (e) {
+  document.querySelectorAll("audio").forEach((audio) => {
+    audio.volume = rangeInput.value / 100;
+  });
+});
