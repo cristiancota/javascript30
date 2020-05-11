@@ -1,0 +1,22 @@
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+:root {
+  --base: #5f9ea0;
+  --spacing: 10px;
+  --blur: 0px;
+}
+
+img {
+  padding: var(--spacing);
+  background-color: var(--base);
+  filter: blur(var(--blur));
+  width: 50%;
+  height: 50%;
+}
+
+h2 span {
+    color: var(--base);
+}
