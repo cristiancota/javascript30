@@ -15,17 +15,17 @@ body {
 .clock {
   width: 400px;
   height: 400px;
+  position: relative;
 }
 
 .clock-frame {
-  border: 3px solid black;
+  border: 3px solid rgba(255, 0, 0, 0.4);
   border-radius: 400px;
   width: 394px;
   height: 394px;
 }
 
 .hand {
-  width: 200px;
   height: 2px;
   background-color: red;
   position: absolute;
@@ -36,13 +36,19 @@ body {
 }
 
 .hand-second {
+  width: 150px;
+  left: 12.5%;
   background-color: #666;
 }
 
 .hand-minute {
+  width: 150px;
+  left: 12.5%;
   background-color: brown;
 }
 
 .hand-hour {
   background-color: black;
+  width: 100px;
+  left: 25%;
 }
