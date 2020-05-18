@@ -1,4 +1,4 @@
-const items = [...document.querySelectorAll("input[type=checkbox]")];
+const checkboxes = [...document.querySelectorAll("input[type=checkbox]")];
 
 let lastChecked;
 
@@ -6,11 +6,9 @@ function handleClick(e) {
   let inBetween = false;
 
   if (e.shiftKey && this.checked) {
-    items.forEach((checkbox) => {
-      console.log(checkbox);
+    checkboxes.forEach((checkbox) => {
       if (checkbox === this || checkbox === lastChecked) {
-        inBetween = !inBetween;
-        console.log("wacha we");
+        inBetween = !inBetween; // toggle inBetween when is lastVisited or is the clicked, this way you can use shift either up or down select
       }
 
       if (inBetween) {
@@ -22,10 +20,6 @@ function handleClick(e) {
   lastChecked = this;
 }
 
-items.forEach((item) => {
-  item.addEventListener("change", function (e) {
-    e.srcElement.parentElement.classList.toggle("selected");
-  });
-
-  item.addEventListener("click", handleClick);
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("click", handleClick);
 });
