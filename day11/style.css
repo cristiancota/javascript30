@@ -1,0 +1,30 @@
+.player {
+  width: 800px;
+}
+
+video {
+  width: 100%;
+}
+
+.progress {
+  width: 100%;
+  flex: 10;
+  display: flex;
+  flex-basis: 100%;
+  height: 5px;
+  cursor: ew-resize;
+}
+
+.player__controls {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.progress__filled {
+  height: 20px;
+  background: red;
+  flex: 0;
+  flex-basis: 0%;
+}
