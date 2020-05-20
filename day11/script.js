@@ -16,11 +16,15 @@ function togglePlay() {
 }
 
 function updateButton() {
-  toggle.textContent = this.paused ? "►" : "||";
+  toggle.textContent = this.paused ? "►" : "❚❚";
 }
 
-function skip() {
-  video.currentTime += parseFloat(this.dataset.skip);
+function skip(seconds) {
+  if (typeof seconds === 'number') {
+    video.currentTime += seconds;
+  } else {
+    video.currentTime += parseFloat(this.dataset.skip);
+  }
 }
 
 function handleRangeUpdate() {
@@ -57,3 +61,22 @@ progress.addEventListener("click", scrub);
 progress.addEventListener("mousemove", (e) => mousedown && scrub(e));
 progress.addEventListener("mousedown", () => (mousedown = true));
 progress.addEventListener("mouseup", () => (mousedown = false));
+
+function handleSpacebar(e) {
+  if (e.keyCode === 32) {
+    e.preventDefault();
+    video.click();
+  }
+
+  if (e.keyCode === 37) {
+    e.preventDefault();
+    skip(-10);
+  }
+
+  if (e.keyCode === 39) {
+    e.preventDefault();
+    skip(10);
+  }
+}
+
+window.addEventListener("keydown", handleSpacebar);
