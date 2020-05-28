@@ -19,6 +19,7 @@ recognition.addEventListener("result", (e) => {
   if (e.results[0].isFinal) {
     p = document.createElement("p");
     words.appendChild(p);
+    words.scrollBy(0, 50); // TODO fix when multiple lines
   }
 });
 
