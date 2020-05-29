@@ -1,13 +1,20 @@
 window.SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
 
+const words = document.querySelector(".words");
+const languageSelect = document.querySelector("#lang");
+let p = document.createElement("p");
+words.appendChild(p);
+
 const recognition = new SpeechRecognition();
 recognition.interimResults = true;
-recognition.lang = "es-MX";
+recognition.lang = "en-US";
 
-let p = document.createElement("p");
-const words = document.querySelector(".words");
-words.appendChild(p);
+function setLanguage() {
+  recognition.lang = this.value;
+  recognition.abort();
+  recognition.start();
+}
 
 recognition.addEventListener("result", (e) => {
   const transcript = [...e.results]
@@ -24,5 +31,5 @@ recognition.addEventListener("result", (e) => {
 });
 
 recognition.addEventListener("end", recognition.start);
-
 recognition.start();
+languageSelect.addEventListener("change", setLanguage);
