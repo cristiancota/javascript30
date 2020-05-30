@@ -1,0 +1,62 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url("https://www.usgbcwm.org/blog/wp-content/uploads/2018/06/minimal-gray-to-white-gradient-wallpapers_33797_1920x1200.jpg");
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.highlight {
+  display: block;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  transition: all 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #000;
+}
+
+ul {
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  display: flex;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.content-wrapper {
+  width: 400px;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+}
